@@ -105,7 +105,7 @@ mainProjects.forEach((section) => {
         trigger: section,
         start: "top 50%",
         end: "top 30%",
-        markers: true,
+        markers: false,
         scrub: 2.5,
       },
     }
