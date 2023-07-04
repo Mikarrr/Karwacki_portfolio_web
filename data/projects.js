@@ -6,9 +6,9 @@ const projects = [
     src: "https://github.com/Mikarrr/futuristic_shop.git",
   },
   {
-    name: "LODADJS",
-    date: "June 19.2023",
-    image: "../photos/futuristic/loginpage.jpg",
+    name: "PORTFOLIO",
+    date: "June 30.2023",
+    image: "../photos/portfolio/portfolio.jpg",
     src: "https://github.com/Mikarrr/futuristic_shop.git",
   },
 ];
