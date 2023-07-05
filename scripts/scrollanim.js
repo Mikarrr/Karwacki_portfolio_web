@@ -5,7 +5,6 @@ const mainDescription = document.querySelectorAll(".main_description");
 const logo = document.querySelectorAll(".logo");
 const hamburger = document.querySelectorAll(".hamburger");
 const mainProjects = document.querySelectorAll(".main_projects");
-const icons = document.querySelectorAll(".js_icon_pop");
 const description = document.querySelectorAll(".js_description_pop");
 mainBanner.forEach((section) => {
   gsap.fromTo(
@@ -91,23 +90,22 @@ mainProjects.forEach((section) => {
     }
   );
 });
-
-icons.forEach((section) => {
+mainDescription.forEach((div) => {
   gsap.fromTo(
-    section.children,
+    div.children,
     { y: "+=100", opacity: 0 },
     {
       y: 0,
       opacity: 1,
-      stagger: 0.5,
+      stagger: 1,
       duration: 5,
       ease: "back",
       scrollTrigger: {
-        trigger: section,
-        start: "top 70%",
-        end: "top 90%",
-        markers: false,
-        scrub: 2.5,
+        trigger: div,
+        start: "top 40%",
+        end: "center 60%",
+        markers: true,
+        scrub: 4.5,
       },
     }
   );
@@ -126,7 +124,7 @@ description.forEach((div) => {
       scrollTrigger: {
         trigger: div,
         start: "top 40%",
-        end: "top 60%",
+        end: "center 60%",
         markers: true,
         scrub: 4.5,
       },
