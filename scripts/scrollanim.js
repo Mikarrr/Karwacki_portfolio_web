@@ -9,7 +9,7 @@ const description = document.querySelectorAll(".js_description_pop");
 mainBanner.forEach((section) => {
   gsap.fromTo(
     section.children,
-    { x: "+=1000", y: "+=1000", opacity: 0 },
+    { x: "+=500", y: "+=500", opacity: 0 },
     {
       x: 0,
       y: 0,
@@ -31,7 +31,7 @@ mainBanner.forEach((section) => {
 logo.forEach((section) => {
   gsap.fromTo(
     section.children,
-    { x: "-=1000", opacity: 0 },
+    { x: "-=500", opacity: 0 },
     {
       x: 0,
       opacity: 1,
@@ -52,7 +52,7 @@ logo.forEach((section) => {
 hamburger.forEach((section) => {
   gsap.fromTo(
     section.children,
-    { x: "+=1000", opacity: 0 },
+    { x: "+=100", opacity: 0 },
     {
       x: 0,
       opacity: 1,
@@ -97,15 +97,15 @@ mainDescription.forEach((div) => {
     {
       y: 0,
       opacity: 1,
-      stagger: 1,
+      stagger: 0.5,
       duration: 5,
       ease: "back",
       scrollTrigger: {
         trigger: div,
-        start: "top 40%",
+        start: "top 60%",
         end: "center 60%",
-        markers: true,
-        scrub: 4.5,
+        markers: false,
+        scrub: 3.5,
       },
     }
   );
@@ -118,15 +118,15 @@ description.forEach((div) => {
     {
       y: 0,
       opacity: 1,
-      stagger: 1,
-      duration: 5,
+      stagger: 0.5,
+      duration: 3,
       ease: "back",
       scrollTrigger: {
         trigger: div,
-        start: "top 40%",
-        end: "center 60%",
+        start: "top 65%",
+        end: "75% 65%",
         markers: true,
-        scrub: 4.5,
+        scrub: 1.5,
       },
     }
   );

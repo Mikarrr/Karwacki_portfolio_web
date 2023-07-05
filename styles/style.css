@@ -289,8 +289,8 @@ body {
 .main_description .small_heading {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding-left: 7em;
-  padding-right: 7em;
+  padding-left: 5em;
+  padding-right: 5em;
 }
 .main_description .small_heading p {
   grid-column: 1;
@@ -309,25 +309,29 @@ body {
   text-decoration: none;
 }
 .description {
-  margin-left: 7em;
-  margin-right: 7em;
-  padding: 3.5em 7em 7em 7em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5em;
+  margin-left: 5em;
+  margin-right: 5em;
+  padding: 2em 3em 4em 5em;
 
   border: 6px solid white;
 }
 .description h4 {
-  font-size: 23px;
+  font-size: 20px;
   color: white;
-  margin-top: 2.5em;
+  margin-top: 2em;
 }
 .description p {
   font-family: "Montsserat", Arial, sans-serif;
-  font-size: 20px;
-  margin-top: 2em;
+  font-size: 17px;
+  margin-top: 1em;
   color: rgb(190, 190, 190);
 }
 .description img {
   margin-top: 1em;
+  margin-bottom: 1em;
   height: 50px;
   padding-right: 1em;
 }
