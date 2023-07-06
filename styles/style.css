@@ -109,6 +109,28 @@ body {
 .logo img {
   height: 40px;
 }
+.scroll_back {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.2;
+  transition: opacity 0.5s ease-in-out;
+}
+.scroll_back a {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 1em 1.35em 1em 1.35em;
+  border-radius: 50%;
+}
+.scroll_back:hover {
+  opacity: 1;
+}
+
 .hamburger .line1,
 .hamburger .line2 {
   display: block;
@@ -549,10 +571,7 @@ body {
   z-index: 2;
   backdrop-filter: grayscale();
 }
-.link-grow {
-  transform: scale(1.7);
-  background-color: rgb(255, 255, 255);
-}
+
 .scaleText {
   transform: scale(10);
   background-color: rgb(255, 255, 255);
@@ -568,7 +587,7 @@ body {
   z-index: 10000;
 }
 
-/* scroll-theme */
+/* scroll_theme */
 
 ::-webkit-scrollbar {
   width: 0em;
