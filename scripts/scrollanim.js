@@ -32,7 +32,7 @@ mainBanner.forEach((section) => {
 
 logo.forEach((section) => {
   gsap.fromTo(
-    section.children,
+    section,
     { x: "-=500", opacity: 0 },
     {
       x: 0,
@@ -53,12 +53,12 @@ logo.forEach((section) => {
 
 hamburger.forEach((section) => {
   gsap.fromTo(
-    section.children,
-    { x: "+=100", opacity: 0 },
+    section,
+    { x: "+=500", opacity: 0 },
     {
       x: 0,
       opacity: 1,
-      stagger: 0.5,
+      stagger: 3,
       duration: 10,
       ease: "easeInOut",
       scrollTrigger: {
@@ -66,7 +66,7 @@ hamburger.forEach((section) => {
         start: "top 80%",
         end: "top 30%",
         markers: false,
-        scrub: 0,
+        scrub: 3,
       },
     }
   );
@@ -125,9 +125,9 @@ mainDescription.forEach((div) => {
       ease: "back",
       scrollTrigger: {
         trigger: div,
-        start: "top 60%",
+        start: "top 50%",
         end: "center 60%",
-        markers: false,
+        markers: true,
         scrub: 3.5,
       },
     }
