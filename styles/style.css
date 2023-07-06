@@ -13,11 +13,12 @@ body {
 .loading_section {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 450px 200px;
-  padding-top: 300px;
+  grid-template-rows: 80vh 20vh;
+  height: 100vh;
 }
 .loading_section div {
   text-align: center;
+  align-self: center;
 }
 .loading_section div h1 {
   font-size: 150px;
@@ -191,26 +192,25 @@ body {
 /*main_banner*/
 .main_banner {
   display: grid;
-  grid-template-columns: 1fr 0.1fr;
+  grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
-  padding-top: 300px;
+  height: 100vh;
 }
 .main_banner .anim {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-row: 2;
 }
 .main_banner h1 {
-  font-size: 120px;
+  font-size: 150px;
   position: relative;
   z-index: 3;
   transition: color 0.8s ease-in-out;
 }
 .main_banner p {
   font-family: "Montsserat", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 19px;
   color: rgb(190, 190, 190);
 }
 .main_banner .text_up {
@@ -219,7 +219,7 @@ body {
 }
 .main_banner .text_middle {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.3fr 0.7fr;
   grid-row: 2;
   text-align: center;
 }
@@ -228,8 +228,8 @@ body {
 }
 .main_banner .text_middle p {
   text-align: right;
-  width: 350px;
-  margin-top: 30px;
+  width: 450px;
+  margin-top: 35px;
   margin-left: 30px;
 }
 .main_banner .text_down {
@@ -237,35 +237,12 @@ body {
   grid-row: 3;
   text-align: center;
 }
-.main_banner .sec_nav {
-  grid-column: 2;
-  grid-row: span 4;
-}
-.main_banner .sec_nav ul {
-  list-style-type: none;
-}
-.main_banner .sec_nav ul li {
-  margin-top: 20px;
-  margin-bottom: 120px;
-  height: 26px;
-  width: 26px;
-  background-color: white;
-}
-.main_banner .sec_nav ul li a {
-  text-decoration: none;
-  color: white;
-  display: inline-block;
-  transition: transform 0.3s ease-in-out;
-}
-.main_banner .sec_nav ul li:checked {
-  transform: rotate(45deg);
-}
 @media (max-width: 1100px) {
   .main_banner {
     grid-template-columns: 1fr;
   }
   .main_banner h1 {
-    font-size: 110px;
+    font-size: 90px;
   }
   .main_banner .text_up {
     grid-row: 1;
@@ -288,9 +265,6 @@ body {
     grid-row: 3;
     text-align: center;
   }
-  .main_banner .sec_nav {
-    display: none;
-  }
 }
 @media (max-width: 700px) {
   .main_banner h1 {
@@ -300,8 +274,8 @@ body {
     transition: color 0.8s ease-in-out;
   }
 }
-/*main_description*/
 
+/*main_description*/
 .main_description {
   margin-top: 200px;
   display: grid;

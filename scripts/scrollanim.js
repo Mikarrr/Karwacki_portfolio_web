@@ -21,8 +21,8 @@ mainBanner.forEach((section) => {
       ease: "back",
       scrollTrigger: {
         trigger: section,
-        start: "top 40%",
-        end: "center 40%",
+        start: "top 70%",
+        end: "center 80%",
         markers: false,
         scrub: 2.5,
       },
