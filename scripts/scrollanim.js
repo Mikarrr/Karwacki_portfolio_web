@@ -127,7 +127,7 @@ mainDescription.forEach((div) => {
         trigger: div,
         start: "top 50%",
         end: "center 60%",
-        markers: true,
+        markers: false,
         scrub: 3.5,
       },
     }
