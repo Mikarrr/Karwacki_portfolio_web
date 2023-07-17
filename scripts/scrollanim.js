@@ -41,7 +41,7 @@ logo.forEach((section) => {
       duration: 10,
       ease: "easeInOut",
       scrollTrigger: {
-        trigger: section,
+        trigger: mainBanner,
         start: "top 80%",
         end: "top 30%",
         markers: false,
@@ -62,7 +62,7 @@ hamburger.forEach((section) => {
       duration: 10,
       ease: "easeInOut",
       scrollTrigger: {
-        trigger: section,
+        trigger: mainBanner,
         start: "top 80%",
         end: "top 30%",
         markers: false,
