@@ -68,6 +68,12 @@ html {
   }
 }
 @media (max-width: 700px) {
+  .loading_section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70vh 20vh;
+    height: 100vh;
+  }
   .loading_section div h1 {
     font-size: 85px;
   }
@@ -93,7 +99,6 @@ html {
   width: 3.5em;
   z-index: 999;
 }
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -164,6 +169,7 @@ nav {
   outline: none;
   cursor: pointer;
   display: block;
+  padding: 0em;
 }
 
 .hamburger .line {
@@ -214,10 +220,23 @@ nav {
     height: 70px;
   }
   .logo {
-    margin-left: 1em;
+    width: 2em;
   }
-  .logo img {
-    height: 30px;
+  nav {
+    height: 5vh;
+    padding-left: 2em;
+    padding-right: 1.5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+  .hamburger {
+    padding-right: 0em;
+  }
+  .hamburger .line {
+    width: 3em;
+    height: 0.2em;
+    margin: 0.5em;
+    border-radius: 0px;
   }
   .scroll_back {
     bottom: 1em;
@@ -230,19 +249,12 @@ nav {
     padding: 0.5em 0.9em 0.5em 0.9em;
     border-radius: 50%;
   }
-  .hamburger {
-    margin-right: 1em;
-  }
-  .hamburger .line1,
-  .hamburger .line2 {
-    width: 30px;
-    height: 2px;
-    margin: 4px 0;
-  }
-  .checkbox:checked ~ .hamburger .line1 {
+
+  .hamburger.active .line:first-child {
     transform: translateX(10px);
   }
-  .checkbox:checked ~ .hamburger .line2 {
+
+  .hamburger.active .line:nth-child(2) {
     transform: translateX(-10px);
   }
 }
