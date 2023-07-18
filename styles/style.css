@@ -589,10 +589,7 @@ nav {
   }
 
   .main_projects .project .project_img {
-    margin-top: 0px;
-    margin-bottom: 20px;
-    height: 250px;
-    width: 200px;
+    display: none;
   }
 
   .main_projects .project .image_description {
