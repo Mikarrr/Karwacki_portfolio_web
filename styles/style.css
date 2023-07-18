@@ -614,6 +614,20 @@ nav {
   }
 }
 
+/* footer */
+
+footer {
+  display: grid;
+  justify-content: center;
+  background-color: rgb(14, 14, 14);
+  padding: 1.5em;
+}
+
+footer h4 {
+  padding-top: 0.5em;
+  font-family: "Montsserat", Arial, sans-serif;
+  font-size: 15px;
+}
 /*cursor_anim*/
 .cursor {
   width: 3rem;
@@ -648,7 +662,6 @@ nav {
 .cursor_index {
   z-index: 10000;
 }
-
 /* scroll_theme */
 
 ::-webkit-scrollbar {
