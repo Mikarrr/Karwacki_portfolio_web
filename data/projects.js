@@ -1,5 +1,11 @@
 const projects = [
   {
+    name: "DOM-JS",
+    date: "June 30.2023",
+    image: "../photos/js-anim-web/js-anim-web.jpg",
+    src: "https://github.com/Mikarrr/DOM-JS-WEBISTE",
+  },
+  {
     name: "PORTFOLIO",
     date: "June 30.2023",
     image: "../photos/portfolio/portfolio.jpg",
