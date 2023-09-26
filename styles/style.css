@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Abril Fatface", serif;
+  font-family: voyage, sans-serif;
   background-color: black;
   color: white;
   overflow-x: hidden;
@@ -15,6 +15,31 @@ html {
   overflow-y: visible;
 }
 /*Loading page */
+.preloader {
+  background-image: url(../photos/bg_loader.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 115%;
+  position: fixed;
+  z-index: 999999;
+  transition: all 1s ease-in-out;
+  top: 0;
+  left: 0;
+  animation: loaderAnimation 2s ease-in-out;
+  overflow: hidden;
+}
+
+@keyframes loaderAnimation {
+  0% {
+    transform: translateX(-200px) rotate(0);
+  }
+  100% {
+    transform: translateX(3000px) rotate(0);
+  }
+}
+
 .loading_section {
   display: grid;
   grid-template-columns: 1fr;
@@ -112,7 +137,7 @@ nav {
 }
 .list {
   background-color: black;
-  height: 900px;
+  height: 920px;
   position: absolute;
   right: 0;
   top: 0vh;
@@ -347,25 +372,23 @@ nav {
 /*main_description*/
 .main_description {
   padding-top: 150px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 5vh auto;
+  display: flex;
+  flex-direction: column;
 }
 .main_description .small_heading {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding-left: 5em;
-  padding-right: 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10em;
+  padding-right: 10em;
 }
 .main_description .small_heading p {
-  grid-column: 1;
   justify-self: left;
   font-family: "Montsserat", Arial, sans-serif;
   font-size: 15px;
   color: rgb(190, 190, 190);
 }
 .main_description .small_heading a {
-  grid-column: 2;
   justify-self: right;
   color: white;
   font-family: "Montsserat", Arial, sans-serif;
@@ -374,13 +397,25 @@ nav {
   text-decoration: none;
 }
 .description {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5em;
-  margin-left: 5em;
-  margin-right: 5em;
-  padding: 2em 3em 4em 5em;
-  border: 6px solid white;
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  margin-left: 10em;
+  margin-right: 10em;
+  margin-top: 2em;
+}
+.description .description_left {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 900px;
+}
+.description .description_left div,
+.description_right {
+  border: 1px solid rgb(190, 190, 190);
+  padding-left: 3em;
+  padding-bottom: 1em;
+  padding-right: 3em;
 }
 .description h4 {
   font-size: 20px;
@@ -392,6 +427,7 @@ nav {
   font-size: 17px;
   margin-top: 1em;
   color: rgb(190, 190, 190);
+  text-align: justify;
 }
 .description img {
   margin-top: 1em;
@@ -513,15 +549,15 @@ nav {
   color: rgb(190, 190, 190);
 }
 .main_projects .project .project_img {
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 30px;
-  height: 700px;
+  height: 650px;
   justify-self: center;
   border: 6px solid white;
 }
 .main_projects .project .image_description {
   display: grid;
-  grid-template-columns: repeat(2, 700px);
+  grid-template-columns: repeat(2, 650px);
   justify-content: center;
 }
 .main_projects .project .image_description p {
