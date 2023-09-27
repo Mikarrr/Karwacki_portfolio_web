@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@100;400;500;700&display=swap");
-
+@font-face {
+  font-family: voyage;
+  src: url("../font/voyage-regular.otf") format("opentype");
+}
 body {
   margin: 0;
   padding: 0;
@@ -26,20 +29,26 @@ html {
   z-index: 999999;
   transition: all 1s ease-in-out;
   top: 0;
-  left: 0;
-  animation: loaderAnimation 2s ease-in-out;
+  left: -200px;
   overflow: hidden;
 }
-
+.animate-preloader {
+  /* Dodaj animację po opóźnieniu */
+  animation: loaderAnimation 1s ease-in-out;
+}
 @keyframes loaderAnimation {
   0% {
-    transform: translateX(-200px) rotate(0);
+    transform: translateX(0px) rotate(0);
   }
   100% {
     transform: translateX(3000px) rotate(0);
   }
 }
-
+@media (max-width: 700px) {
+  .preloader {
+    left: -20px;
+  }
+}
 .loading_section {
   display: grid;
   grid-template-columns: 1fr;
@@ -251,6 +260,7 @@ nav {
     padding-right: 1.5em;
     padding-top: 3em;
     padding-bottom: 3em;
+    background-color: black;
   }
   .hamburger {
     padding-right: 0em;
@@ -622,7 +632,8 @@ nav {
   }
 
   .main_projects .project .project_img {
-    height: 450px;
+    height: 400px;
+    width: 90%;
   }
 
   .main_projects .project .image_description {
