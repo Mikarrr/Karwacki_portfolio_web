@@ -146,6 +146,71 @@
         <div class="line"></div>
         <div class="js-projects-grid"></div>
       </section>
+      <section id="main_form" class="main_form">
+        <div class="contact_form">
+          <p>Kontakt</p>
+          <hr />
+          <h2>WYŚLIJ SWOJE ZAPYTANIE</h2>
+          <br />
+        </div>
+
+        <form
+          method="POST"
+          action="../script/form_contact.php"
+          enctype="multipart/form-data"
+        >
+          <div class="form-group">
+            <label for="email">EMAIL:</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="np. jan@kowalski.pl"
+            />
+          </div>
+          <div class="form-group">
+            <label for="topic">TEMAT:</label><br />
+            <input
+              type="topic"
+              id="topic"
+              name="topic"
+              required
+              placeholder="np. Zapytanie o wycenę nadruku na..."
+            />
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="message">WIADOMOŚĆ:</label><br />
+            <textarea
+              type="message"
+              id="message"
+              name="message"
+              cols="93"
+              rows="15"
+              required
+              placeholder="np. Proszę o wycenę nadruku..."
+            ></textarea>
+          </div>
+          <div class="inline">
+            <div class="form-group">
+              <label for="file-upload" class="custom-file-upload change">
+                Wybierz plik
+              </label>
+              <input
+                id="file-upload"
+                type="file"
+                name="attachment"
+                accept=".pdf, .doc, .docx, .jpg, .png"
+              />
+            </div>
+            <br />
+            <button class="submit" type="submit">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+      </section>
     </main>
 
     <footer>

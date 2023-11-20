@@ -11,7 +11,7 @@ projects.forEach((project) => {
   <div class="project">
     <h3>${project.name}</h3>
     <h2>${project.name}</h2>
-    <img src="../photos/logo.png" alt="" />
+    <img class="logo_project" src="../photos/logo.png" alt="" />
     <p>Created - ${project.date}</p>
     <img
       class="project_img"

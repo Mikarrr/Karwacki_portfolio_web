@@ -1,9 +1,23 @@
 const projects = [
   {
-    name: "THEATRE",
+    name: "MAKOWSKI",
+    date: "November 15.2023",
+    image: "../photos/les_makowski/les_makowski_web.jpg",
+    image_mobile: "../photos/les_makowski/les_makowski_mobile.jpg",
+    src: "https://gallerymakowskitriart.com",
+  },
+  {
+    name: "SITEX",
+    date: "November 20.2023",
+    image: "../photos/sitex/sitex_web.jpg",
+    image_mobile: "../photos/sitex/sitex_mobile.jpg",
+    src: "https://sitexdruk.pl",
+  },
+  {
+    name: "LAGASIN",
     date: "June 30.2023",
-    image: "../photos/js-anim-web/js-anim-web.jpg",
-    image_mobile: "../photos/js-anim-web/js-anim-web-mobile.jpg",
+    image: "../photos/lagasin/lagasin_web.jpg",
+    image_mobile: "../photos/lagasin/lagasin_mobile.jpg",
     src: "https://github.com/Mikarrr/DOM-JS-WEBISTE",
   },
   {

@@ -383,13 +383,14 @@ nav {
   padding-top: 150px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .main_description .small_heading {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 10em;
-  padding-right: 10em;
+  width: 90%;
 }
 .main_description .small_heading p {
   justify-self: left;
@@ -409,15 +410,18 @@ nav {
   display: flex;
   flex-direction: row;
   gap: 2em;
-  margin-left: 10em;
-  margin-right: 10em;
+  width: 90%;
   margin-top: 2em;
 }
 .description .description_left {
   display: flex;
   flex-direction: column;
+  width: 60%;
   gap: 2em;
-  width: 900px;
+}
+
+.description .description_right {
+  width: 40%;
 }
 .description .description_left div,
 .description_right {
@@ -482,7 +486,7 @@ nav {
     padding-right: 2em;
   }
   .description img {
-    height: 42px;
+    height: 55px;
   }
   .description p {
     font-family: "Montsserat", Arial, sans-serif;
@@ -532,7 +536,7 @@ nav {
   font-size: 95px;
   justify-self: center;
 }
-.main_projects .project > img {
+.main_projects .project .logo_project {
   margin-top: 40px;
   margin-bottom: 50px;
   height: 40px;
@@ -559,14 +563,16 @@ nav {
 .main_projects .project .project_img {
   margin-top: 30px;
   margin-bottom: 30px;
-  height: 650px;
   justify-self: center;
   border: 6px solid white;
+  width: 70%;
 }
 .main_projects .project .image_description {
-  display: grid;
-  grid-template-columns: repeat(2, 650px);
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+  justify-self: center;
 }
 .main_projects .project .image_description p {
   font-family: "Montsserat", Arial, sans-serif;
@@ -632,7 +638,6 @@ nav {
   }
 
   .main_projects .project .project_img {
-    height: 400px;
     width: 90%;
   }
 
@@ -653,6 +658,14 @@ nav {
     font-size: 12px;
     margin-bottom: 80px;
   }
+}
+/* main_form */
+
+.main_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10em;
 }
 
 /* footer */
