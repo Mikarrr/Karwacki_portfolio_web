@@ -108,7 +108,7 @@ mainProjects.forEach((section) => {
         start: "top 50%",
         end: "top 30%",
         markers: false,
-        scrub: 2.5,
+        scrub: 3,
       },
     }
   );
