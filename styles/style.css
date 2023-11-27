@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@100;400;500;700&display=swap");
 @font-face {
   font-family: voyage;
-  src: url("../font/voyage-regular.otf") format("opentype");
+  src: url("../font/voyage-regular.woff") format("opentype");
 }
 body {
   margin: 0;
@@ -145,7 +145,7 @@ nav {
 }
 .list {
   background-color: black;
-  height: 920px;
+  height: 100vh;
   position: absolute;
   right: 0;
   top: 0vh;
@@ -450,11 +450,6 @@ nav {
 }
 
 @media (max-width: 700px) {
-  .main_description .small_heading {
-    flex-direction: column;
-    padding-left: 2em;
-    padding-right: 2em;
-  }
   .main_description .small_heading p {
     justify-self: left;
     font-family: "Montsserat", Arial, sans-serif;
@@ -490,7 +485,7 @@ nav {
     padding-right: 2em;
   }
   .description img {
-    height: 55px;
+    height: 35px;
   }
   .description p {
     font-family: "Montsserat", Arial, sans-serif;
@@ -685,13 +680,21 @@ footer h4 {
   width: 3rem;
   height: 3rem;
   border: 2px solid white;
+}
+.dot_cursor {
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: white;
+}
+
+.cursor,
+.dot_cursor {
+  position: fixed;
   border-radius: 50%;
-  position: absolute;
   transform: translate(-50%, -50%);
   pointer-events: none;
   transition: all 1s ease;
   transition-property: background, transform;
-  transform-origin: 50% 50%;
   z-index: 2;
   backdrop-filter: grayscale();
 }
@@ -703,6 +706,10 @@ footer h4 {
 .scaleText {
   transform: scale(10);
   background-color: rgb(255, 255, 255);
+}
+.scaleTextHref {
+  transform: scale(7);
+  color: rgb(255, 255, 255);
 }
 .hovered-link {
   transition: color 0.5s ease;
