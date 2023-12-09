@@ -3,9 +3,13 @@
   font-family: voyage;
   src: url("../font/voyage-regular.woff") format("opentype");
 }
-body {
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+body {
   font-family: voyage, sans-serif;
   background-color: black;
   color: white;
@@ -13,10 +17,7 @@ body {
   overflow-y: visible;
   cursor: none;
 }
-html {
-  overflow-x: hidden;
-  overflow-y: visible;
-}
+
 /*Loading page */
 .preloader {
   background-image: url(../photos/bg_loader.png);
@@ -497,14 +498,13 @@ nav {
 }
 
 /*main_projects*/
-.main_projects {
-  display: grid;
-  grid-template-columns: 1fr;
+.main_projects_tittle {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
-.main_projects h1 {
+.main_projects_tittle h1 {
   padding-top: 300px;
   font-size: 95px;
   text-align: center;
@@ -514,84 +514,128 @@ nav {
   color: white;
   transition: color 0.8s ease-in-out;
 }
-.main_projects .line {
+.main_projects_tittle .line {
   display: grid;
   grid-template-columns: 1fr;
-  border-left: 3px solid white;
+  border-left: 1px solid rgb(190, 190, 190);
   height: 350px;
   width: 0px;
   justify-self: center;
-  margin-bottom: 250px;
+}
+
+.main_projects {
+  display: flex;
+  width: 600vw;
+  height: 100vh;
+  border-top: 1px solid rgb(190, 190, 190);
+  border-bottom: 1px solid rgb(190, 190, 190);
+  position: relative;
+  z-index: 1;
 }
 
 .main_projects .project {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-self: center;
-  align-content: center;
-  margin-bottom: 270px;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main_projects .project .project_left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  padding-left: 5em;
+  padding-right: 5em;
+}
+.main_projects .project .project_right {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-left: 1px solid rgb(190, 190, 190);
+  border-right: 1px solid rgb(190, 190, 190);
 }
 .main_projects .project h2 {
   font-size: 95px;
-  justify-self: center;
 }
+
 .main_projects .project .logo_project {
-  margin-top: 40px;
-  margin-bottom: 50px;
-  height: 40px;
-  justify-self: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 40px;
 }
-.main_projects .project h3 {
-  font-size: 400px;
-  position: absolute;
-  justify-self: center;
-  z-index: -1;
-  color: rgb(104, 104, 104);
-  margin-top: -180px;
-  overflow: hidden;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 2px;
-}
+
 .main_projects .project p {
   font-family: "Montsserat", Arial, sans-serif;
-  justify-self: center;
   font-size: 15px;
-  margin-bottom: 100px;
+
   color: rgb(190, 190, 190);
 }
-.main_projects .project .project_img {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  justify-self: center;
-  border: 6px solid white;
-  width: 70%;
+
+.project_img {
+  height: 70vh;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid rgb(190, 190, 190);
 }
+
 .main_projects .project .image_description {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 90%;
+}
+.main_projects .project .image_description .image_description_top {
+  display: flex;
   justify-content: space-between;
-  width: 70%;
-  justify-self: center;
+  width: 90%;
+  align-items: center;
+}
+
+.main_projects .project .image_description .image_description_top .links {
+  display: flex;
+  gap: 2em;
+}
+.main_projects .project .image_description .image_description_down {
+  display: flex;
+  justify-content: space-between;
+
+  width: 90%;
+  align-items: center;
+}
+.main_projects
+  .project
+  .image_description
+  .image_description_down
+  .technologies {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
 }
 .main_projects .project .image_description p {
   font-family: "Montsserat", Arial, sans-serif;
-  justify-self: left;
+  margin: 0;
   font-size: 15px;
-  margin-bottom: 100px;
   color: rgb(190, 190, 190);
 }
 .main_projects .project a {
-  height: 50px;
-  width: 150px;
   font-family: "Montsserat", Arial, sans-serif;
   font-weight: bold;
   font-size: 15px;
   text-decoration: none;
-  text-align: center;
   color: white;
-  justify-self: right;
 }
-
+/*
 @media (max-width: 768px) {
   .main_projects {
     display: flex;
@@ -652,6 +696,7 @@ nav {
     margin-bottom: 80px;
   }
 }
+*/
 /* main_form */
 
 .main_form {
