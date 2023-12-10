@@ -204,7 +204,6 @@ nav {
   display: block;
   padding: 0em;
 }
-
 .hamburger .line {
   width: 3em;
   height: 0.2em;
@@ -221,11 +220,9 @@ nav {
 .hamburger.active .line:nth-child(2) {
   transform: translateX(-15px);
 }
-
 .list.active {
   transform: translate(0%);
 }
-
 .scroll_back {
   position: fixed;
   bottom: 2em;
@@ -253,7 +250,7 @@ nav {
     height: 70px;
   }
   .logo {
-    width: 2em;
+    width: 1.7em;
   }
   nav {
     height: 5vh;
@@ -261,14 +258,15 @@ nav {
     padding-right: 1.5em;
     padding-top: 3em;
     padding-bottom: 3em;
+    background-color: black;
   }
   .hamburger {
     padding-right: 0em;
   }
   .hamburger .line {
-    width: 3em;
-    height: 0.2em;
-    margin: 0.5em;
+    width: 2em;
+    height: 0.15em;
+    margin: 0.3em;
     border-radius: 0px;
   }
   .scroll_back {
@@ -419,7 +417,6 @@ nav {
   width: 60%;
   gap: 2em;
 }
-
 .description .description_right {
   width: 40%;
 }
@@ -496,7 +493,7 @@ nav {
   }
 }
 
-/*main_projects*/
+/*main_projects_tittle*/
 .main_projects_tittle {
   display: flex;
   flex-direction: column;
@@ -522,6 +519,7 @@ nav {
   justify-self: center;
 }
 
+/*main_projects*/
 .main_projects {
   display: flex;
   width: 600vw;
@@ -531,7 +529,6 @@ nav {
   position: relative;
   z-index: 1;
 }
-
 .main_projects .project {
   display: flex;
   flex-direction: row;
@@ -540,7 +537,6 @@ nav {
   height: 100vh;
   width: 100vw;
 }
-
 .main_projects .project .project_left {
   display: flex;
   flex-direction: column;
@@ -562,20 +558,17 @@ nav {
 .main_projects .project h2 {
   font-size: 95px;
 }
-
 .main_projects .project .logo_project {
   margin-top: 20px;
   margin-bottom: 20px;
   width: 40px;
 }
-
 .main_projects .project p {
   font-family: "Montsserat", Arial, sans-serif;
   font-size: 15px;
 
   color: rgb(190, 190, 190);
 }
-
 .project_img {
   height: 70vh;
   width: 100%;
@@ -584,7 +577,6 @@ nav {
   background-repeat: no-repeat;
   border-bottom: 1px solid rgb(190, 190, 190);
 }
-
 .main_projects .project .image_description {
   display: flex;
   flex-direction: column;
@@ -600,7 +592,6 @@ nav {
   width: 90%;
   align-items: center;
 }
-
 .main_projects .project .image_description .image_description_top .links {
   display: flex;
   gap: 2em;
@@ -637,7 +628,7 @@ nav {
 
 @media (max-width: 1150px) {
   .main_projects_tittle h1 {
-    font-size: 45px;
+    font-size: 40px;
   }
   .main_projects_tittle .line {
     display: grid;
@@ -656,6 +647,7 @@ nav {
     border-bottom: 1px solid rgb(190, 190, 190);
     position: relative;
     z-index: 1;
+    margin-bottom: 5em;
   }
 
   .main_projects .project {
@@ -670,6 +662,8 @@ nav {
   .main_projects .project .project_left {
     display: flex;
     width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
     height: 20vh;
     border-top: 1px solid rgb(190, 190, 190);
     border-left: 1px solid rgb(190, 190, 190);
@@ -685,24 +679,23 @@ nav {
     border-top: 1px solid rgb(190, 190, 190);
   }
   .main_projects .project h2 {
-    padding-top: 20px;
-    font-size: 55px;
+    font-size: 40px;
   }
 
   .main_projects .project .logo_project {
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 30px;
+    width: 20px;
   }
 
   .main_projects .project p {
     font-family: "Montsserat", Arial, sans-serif;
-    font-size: 15px;
+    font-size: 13px;
     color: rgb(190, 190, 190);
   }
 
   .project_img {
-    height: 60vh;
+    height: 52vh;
     width: 100%;
     background-position: center;
     background-size: cover;
@@ -716,12 +709,14 @@ nav {
     justify-content: center;
     align-content: center;
     align-items: center;
-    height: 20vh;
-    width: 90%;
+    height: 27vh;
+    width: 100%;
   }
   .main_projects .project .image_description .image_description_top {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5em;
     width: 90%;
     align-items: center;
   }
@@ -731,23 +726,24 @@ nav {
     gap: 2em;
   }
   .main_projects .project .image_description .image_description_down {
+    padding-top: 1em;
     display: flex;
-    justify-content: space-between;
-
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5em;
     width: 90%;
     align-items: center;
   }
 
   .main_projects .project .image_description p {
-    font-size: 14px;
+    font-size: 13px;
   }
   .main_projects .project a {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
 /* main_form */
-
 .main_form {
   display: flex;
   flex-direction: column;
@@ -763,12 +759,12 @@ footer {
   background-color: rgb(14, 14, 14);
   padding: 1.5em;
 }
-
 footer h4 {
   padding-top: 0.5em;
   font-family: "Montsserat", Arial, sans-serif;
   font-size: 15px;
 }
+
 /*cursor_anim*/
 .cursor {
   width: 3rem;
@@ -780,7 +776,6 @@ footer h4 {
   height: 0.7rem;
   background-color: white;
 }
-
 .cursor,
 .dot_cursor {
   position: fixed;
