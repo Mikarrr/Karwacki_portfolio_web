@@ -62,5 +62,6 @@ const projects = [
     js: "../photos/icon/js.png",
     figma: "../photos/icon/figma.png",
     ph: "../photos/icon/photoshop.png",
+    php: "../photos/icon/php.png",
   },
 ];

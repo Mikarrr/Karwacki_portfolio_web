@@ -158,36 +158,38 @@ mainProjectsTittle.forEach((div) => {
 const MainProjects = document.querySelector(".main_projects");
 const divs = gsap.utils.toArray(".main_projects .project");
 
-let scrollTwin = gsap.to(divs, {
-  xPercent: -100 * (divs.length - 1),
-  ease: "none",
-  scrollTrigger: {
-    trigger: MainProjects,
-    pin: true,
-    scrub: 1,
-    end: "+=6000",
-  },
-});
+if (window.innerWidth >= 1150) {
+  let scrollTwin = gsap.to(divs, {
+    xPercent: -100 * (divs.length - 1),
+    ease: "none",
+    scrollTrigger: {
+      trigger: MainProjects,
+      pin: true,
+      scrub: 1,
+      end: "+=6000",
+    },
+  });
 
-divs.forEach((div, index) => {
-  if (index !== 0) {
-    let items = div.querySelectorAll(".anim");
+  divs.forEach((div, index) => {
+    if (index !== 0 && window.innerWidth >= 1150) {
+      let items = div.querySelectorAll(".anim");
 
-    items.forEach((item) => {
-      gsap.from(item, {
-        y: -130,
-        opacity: 0,
-        stagger: 0.5,
-        duration: 1,
-        ease: "power1",
+      items.forEach((item) => {
+        gsap.from(item, {
+          y: -130,
+          opacity: 0,
+          stagger: 0.5,
+          duration: 1,
+          ease: "power1",
 
-        scrollTrigger: {
-          trigger: div,
-          containerAnimation: scrollTwin,
-          start: "left center",
-          markers: false,
-        },
+          scrollTrigger: {
+            trigger: div,
+            containerAnimation: scrollTwin,
+            start: "left center",
+            markers: false,
+          },
+        });
       });
-    });
-  }
-});
+    }
+  });
+}
