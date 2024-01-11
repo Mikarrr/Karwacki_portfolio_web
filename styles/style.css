@@ -628,7 +628,7 @@ nav {
 
 @media (max-width: 1150px) {
   .main_projects_tittle h1 {
-    font-size: 40px;
+    font-size: 60px;
   }
   .main_projects_tittle .line {
     display: grid;
@@ -743,6 +743,112 @@ nav {
   }
 }
 
+/* how work */
+
+.main_brief_tittle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main_brief_tittle h1 {
+  padding-top: 300px;
+  font-size: 95px;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 3;
+  color: white;
+  transition: color 0.8s ease-in-out;
+}
+.main_brief_tittle .line {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-left: 1px solid rgb(190, 190, 190);
+  height: 450px;
+  width: 0px;
+  justify-self: center;
+}
+
+.main_brief {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, 43vh);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.deff {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 3em;
+  justify-content: center;
+  margin-top: 25vh;
+  height: 43vh;
+  width: 33.33vw;
+  border: 1px solid rgb(190, 190, 190);
+}
+.deff_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.deff h3 {
+  font-size: 40px;
+}
+.deff p {
+  text-align: justify;
+  font-family: "Montsserat", Arial, sans-serif;
+  font-size: 17px;
+  color: rgb(190, 190, 190);
+}
+
+.def4 {
+  border: none !important;
+}
+
+@media (max-width: 1150px) {
+  .main_brief_tittle h1 {
+    font-size: 60px;
+  }
+  .main_brief_tittle .line {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-left: 1px solid rgb(190, 190, 190);
+    height: 450px;
+    width: 0px;
+    justify-self: center;
+  }
+}
+@media (max-width: 1330px) {
+  .main_brief {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(6, 43.5vh);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 217.5vh;
+    overflow: hidden;
+  }
+  .deff {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 3em;
+    justify-content: center;
+    margin-top: 0vh;
+    height: 43vh;
+    width: 100vw;
+    border: 1px solid rgb(190, 190, 190);
+  }
+  .def4 {
+    display: none;
+  }
+}
 /* main_form */
 .main_form {
   display: flex;

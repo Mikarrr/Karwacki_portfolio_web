@@ -7,6 +7,7 @@ const hamburger = document.querySelectorAll(".hamburger");
 const scrollUpButton = document.querySelectorAll(".scroll_back");
 const mainProjectsTittle = document.querySelectorAll(".main_projects_tittle");
 const description = document.querySelectorAll(".js_description_pop");
+const mainBriefTittle = document.querySelectorAll(".main_brief_tittle");
 
 mainBanner.forEach((section) => {
   gsap.fromTo(
@@ -193,3 +194,50 @@ if (window.innerWidth >= 1150) {
     }
   });
 }
+
+mainBriefTittle.forEach((div) => {
+  gsap.fromTo(
+    div.children,
+    { y: "+=100", opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.5,
+      duration: 3,
+      ease: "back",
+      scrollTrigger: {
+        trigger: div,
+        start: "40% 65%",
+        end: "40% 65%",
+        markers: false,
+        scrub: 2,
+      },
+    }
+  );
+});
+
+const main_brief = document.querySelector(".main_brief");
+const deffs = document.querySelectorAll(".main_brief");
+
+const isMobile = window.innerWidth < 1100;
+
+deffs.forEach((section) => {
+  gsap.fromTo(
+    section.children,
+    {
+      y: "+=1000",
+    },
+    {
+      y: 0,
+      stagger: 0.5,
+      duration: 1,
+      ease: "pulse",
+      scrollTrigger: {
+        trigger: main_brief,
+        pin: !isMobile,
+        scrub: isMobile ? 0.5 : 1.5,
+        end: isMobile ? "1000vh" : "2000vh", // Ustaw różną wartość 'end' dla urządzeń mobilnych
+      },
+    }
+  );
+});
