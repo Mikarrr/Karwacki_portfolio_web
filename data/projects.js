@@ -1,5 +1,17 @@
 const projects = [
   {
+    name: "REACT BLOG",
+    date: "January 11.2023",
+    image: "../photos/react_blog/react_blog_web.jpg",
+    image_mobile: "../photos/react_blog/react_blog_phone.jpg",
+    src: "https://github.com/Mikarrr/react-blog",
+    react: "../photos/icon/react.png",
+    html: "../photos/icon/html-5.png",
+    css: "../photos/icon/sass.png",
+    js: "../photos/icon/js.png",
+    figma: "../photos/icon/figma.png",
+  },
+  {
     name: "MAKOWSKI",
     date: "November 15.2023",
     image: "../photos/les_makowski/les_makowski_web.jpg",
@@ -30,12 +42,14 @@ const projects = [
     date: "June 30.2023",
     image: "../photos/lagasin/lagasin_web.jpg",
     image_mobile: "../photos/lagasin/lagasin_mobile.jpg",
-    src: "https://github.com/Mikarrr/DOM-JS-WEBISTE",
+    src: "https://github.com/Mikarrr/LAGASINAPI",
     html: "../photos/icon/html-5.png",
     css: "../photos/icon/css-3.png",
     js: "../photos/icon/js.png",
     figma: "../photos/icon/figma.png",
     ph: "../photos/icon/photoshop.png",
+    csharp: "../photos/icon/csharp.png",
+    net: "../photos/icon/net.png",
   },
   {
     name: "PORTFOLIO",

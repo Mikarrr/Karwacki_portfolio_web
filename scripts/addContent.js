@@ -26,6 +26,15 @@ projects.forEach((project) => {
   const phpLogo = project.php
     ? `<img class="logo_project" src="${project.php}" alt="" />`
     : "";
+  const csharpLogo = project.csharp
+    ? `<img class="logo_project" src="${project.csharp}" alt="" />`
+    : "";
+  const netLogo = project.net
+    ? `<img class="logo_project" src="${project.net}" alt="" />`
+    : "";
+  const reactLogo = project.react
+    ? `<img class="logo_project" src="${project.react}" alt="" />`
+    : "";
 
   // Check if either project.src or project.srcweb has a non-empty value
   const linksSection =
@@ -71,6 +80,9 @@ projects.forEach((project) => {
               ${figmaLogo}
               ${phLogo}
               ${phpLogo}
+              ${csharpLogo}
+              ${netLogo}
+              ${reactLogo}
             </div>
           </div>
         </div>

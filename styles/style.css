@@ -557,6 +557,7 @@ nav {
 }
 .main_projects .project h2 {
   font-size: 95px;
+  text-align: center;
 }
 .main_projects .project .logo_project {
   margin-top: 20px;
@@ -642,7 +643,7 @@ nav {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 500vh;
+    height: 600vh;
     border-top: 1px solid rgb(190, 190, 190);
     border-bottom: 1px solid rgb(190, 190, 190);
     position: relative;
@@ -925,4 +926,10 @@ footer h4 {
 
 ::-webkit-scrollbar {
   width: 0em;
+}
+
+#my-scrollbar {
+  width: 500px;
+  height: 500px;
+  overflow: auto;
 }
