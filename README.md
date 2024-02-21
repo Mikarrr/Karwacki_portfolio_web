@@ -1,7 +1,5 @@
 # Karwacki portfolio
 
-Karwacki - Portfolio
-
 ## Description
 
 This is a personal portfolio website created by Mikołaj Karwacki, a frontend developer based in Poland. The portfolio showcases his skills, projects, and contact information.
